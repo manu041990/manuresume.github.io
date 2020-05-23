@@ -1,0 +1,1175 @@
+
+body
+{
+ margin-top: 0px;
+ margin-left: 0px;
+ margin-right: 0px;
+ padding:0px;
+ width:100%;
+ height:100vh;
+
+}
+#index
+{
+    background-image: url("bakground.png");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-attachment:fixed;
+height: 675px;
+margin-top: 0px;
+    
+} 
+  
+@keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+    }
+}
+#iconbar
+{
+    visibility: hidden;
+    opacity:0;
+    
+     color: black;
+     font-size:2rem;
+     float:right;
+     position:fixed;
+     top:20px;
+     left:20px;
+}
+#menu_list ul
+{
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    border-right:2px solid black;
+    list-style: none;
+   padding-top: 2%;
+   margin-top: 0px;
+        box-shadow: 0 0 3px white inset;
+        opacity: 0.7;
+        animation: fadeInAnimation ease 4s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+      
+     
+}
+#menu_list ul li a
+{
+    list-style: none;
+  margin-bottom: 15px;
+  padding-top:0px;
+  display:inline-block;
+  text-decoration: none;
+  font:20px bolder monospace;
+      color:white;
+  padding: 15px 0;
+       
+}
+
+a:hover {
+    transition: 0.5s ease;
+    border-top:2px solid black;
+    border-bottom: 2px solid black;
+  margin-left: 0px;
+  padding-left: 23px;
+       width:auto;
+}
+#name1
+{
+ animation: fadeInAnimation ease 4s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;   
+	padding-top:13%;
+	list-style:none;
+	margin-left: 35%;
+	font-size:42px;
+	color:black;
+	font-family:monospace;
+}
+#name
+{
+    
+    width:30%;
+    margin-left: 40%;
+    margin-top: 25px;
+    padding-top: 6px;
+    height:80px;
+    border: 11px black;
+    background: transparent;
+    box-shadow: 8px 8px 8px 8px black;
+	list-style:none;
+	text-align:center;
+	font-size:55px;
+	color: black;
+	font-family:monospace;
+        font-weight: 9400;
+        animation: movename 3s ease-out ;
+}
+@keyframes movename
+{
+    from{
+        width:0%;
+        margin
+    }
+    to{
+        width:30%;
+    }
+}
+#occup
+{
+	list-style:none;
+        margin-left: 28%;
+	text-align:center;
+	font-size:24px;
+	color:black;
+	padding-top:3%;
+	font-family:monospace;
+        animation: fadeInAnimation ease 4s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+.container {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  margin-top: 130px;
+    margin-left: 50%;
+}
+
+.chevron {
+  
+  position: absolute;
+  width: 48px;
+  height: 10px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+    color:white;
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+    color:white;
+  content: ' ';
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background:black;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+#introduction{
+height: 675px;
+    width:100%;
+ 
+ 
+}
+#aboutme
+{
+    float:left;
+    font-size: 48px;
+    font-weight: 400;
+    margin-top: 270px;
+   margin-left: 5%;
+    transform: rotate(-90deg);
+    text-shadow: 2px 2px black;
+   /*animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;*/
+}
+@keyframes typing {
+  from { width: 0% }
+  to { width: 73% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: transparent; }
+}
+#intro
+{
+    width:43%;
+    float:left;
+    border:2px solid grey;
+    text-align: justify;
+    font:20px monospace;
+    margin-top: 150px;
+    box-shadow: 4px 6px 6px 6px grey;
+}
+#back2Top {
+    width: 40px;
+    line-height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    -moz-transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    background-color:black;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+}
+#back2Top:hover {
+    background-color: #DDF;
+    
+}
+#education{
+  background-image: url("bakground.png");
+ background-repeat: no-repeat;
+ background-size: 100% 675px;
+ background-attachment:fixed;
+
+}
+h1
+{
+    text-decoration: underline;
+    font-size: 20px;
+    margin-left: 240px;
+}
+.wrapper
+{
+    padding-top: 4%;
+    width: 100%;
+    height: 675px;
+}
+.wrapper2{
+    background-color:transparent;
+    margin-left: 420px;
+    border:2px solid black;
+    width:46%;
+    margin-top: 80px;
+    height:150px;
+}
+#birth{
+    
+   font:19px monospace;
+  float: left;
+  margin-top: 3.5%;
+  margin-left: 240px;
+}
+#school{
+    
+   font:19px monospace;
+   float: left;
+  margin-top: 3.5%;
+}
+#graduation{
+    
+   font:19px monospace;
+   float:left;
+  margin-top: 3.5%;
+}
+h2{
+    margin-top: 1px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.details
+{
+    margin-top: 25px;
+    margin-left: 5px;
+      float: left;
+}
+.details2
+{
+    border-left:2px solid black;
+   padding-top: 25px;
+  margin-left: 300px;
+}
+#graddetail{
+    font: 20px monospace;
+    color: black;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#postgraduation{
+    float:left;
+   font:19px monospace;
+  margin-top: 3.5%;
+}
+#postgraddetail{
+    font: 20px monospace;
+    margin-left: 8%;
+    color: black;
+}
+#freelancer{
+    
+   font:19px monospace;
+  top: 50%;
+  left: 50%;
+  margin-top:5%;
+}
+.vertical-line {
+  width: 2px;
+  height: 150px;
+  background: black;
+  margin: 2px auto 0 auto;
+}
+
+hr {
+    margin-top: 4.2%;
+    float: left;
+  border: 0;
+  width:4%;
+  height: 4px;
+  background: black;
+}
+.dot {
+  height: 11px;
+  width: 11px;
+  background-color: #bbb;
+  border-radius: 50%;
+}
+#bg
+{
+    background-color: white;
+    opacity:0.7;
+    width: 100%;
+    height:80px;
+     box-shadow: 0px 0px 6px;
+}
+
+.skills{
+    
+        width: 100%;
+    height:675px;
+}
+#skilllang
+{
+  font:33px monospace;
+  margin-left: 85%;
+  
+}
+#skill
+{
+    margin-top: 90px;
+    display: inline;
+ font:18px monospace;
+
+}
+#skilllang
+{
+    float:left;
+    font-size: 48px;
+    font-weight: 400;
+    margin-top: 270px;
+   margin-left: 5%;
+    transform: rotate(-90deg);
+    text-shadow: 2px 2px black;
+   /*animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;*/
+}
+.percent
+{
+    float:right;
+    margin-left: 40px;
+    font: 18px monospace;
+}
+.progress {
+    border: 1px solid;
+    margin-right: 150px;
+    float: right;
+  background: rgba(255,255,255,0.1);
+  height: 16px;
+  width: 400px;
+}
+
+.progress-value1 {
+  animation: load 3s normal forwards;
+  box-shadow: 0 -10px 10px -10px #fff;
+  background: black;
+  height: 16px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 68%; }
+}
+.progress-value2 {
+  animation: load2 3s normal forwards;
+  box-shadow: 0 -10px 40px -10px #fff;
+  background: black;
+  height: 16px;
+  width: 0;
+}
+
+@keyframes load2 {
+  0% { width: 0; }
+  100% { width: 66%; }
+}
+.progress-value3 {
+  animation: load3 3s normal forwards;
+  box-shadow: 0 -10px 40px -10px #fff;
+  background: black;
+  height: 16px;
+  width: 0;
+}
+
+@keyframes load3 {
+  0% { width: 0; }
+  100% { width: 80%; }
+}
+.progress-value4 {
+  animation: load4 3s normal forwards;
+  box-shadow: 0 -10px 40px -10px #fff;
+  background: black;
+  height: 16px;
+  width: 0;
+}
+
+@keyframes load4 {
+  0% { width: 0; }
+  100% { width: 60%; }
+}
+.progress-value5 {
+  animation: load5 3s normal forwards;
+  box-shadow: 0 -10px 40px -10px #fff;
+  background: black;
+  height: 16px;
+  width: 0;
+}
+
+@keyframes load5 {
+  0% { width: 0; }
+  100% { width: 50%; }
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 100 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  
+}
+#contact1{
+    width: 27%;
+    height:400px;
+    background-color:transparent;
+    color: black;
+    border: 1px solid;
+    box-shadow: 0px 0px 8px;
+    font:  22px monospace;
+ padding-top: 0px;
+ float:left;
+ padding-left: 8%;
+ margin-left: 19%;
+ margin-top: 140px;
+ transform: rotate(-9deg);
+ border-radius: 15%;
+}
+#contact2{
+    border-radius: 15%;
+    width: 25%;
+    height:230px;
+    background-color:transparent;
+    color: black;
+    border: 1px solid;
+    box-shadow: 0px 0px 8px;
+    font:  20px monospace;
+    margin-top: 30%;
+ transform: rotate(-9deg);
+    padding-left:150px;
+    margin-left: 640px;
+ 
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+     background-image: url("bakground.png");
+ background-repeat: no-repeat;
+ background-size: 100% 675px;
+ background-attachment:fixed;
+ width: 100%;
+ height:675px;
+}
+
+#contact fieldset {
+      background: transparent;
+   border:1px solid; 
+  border: medium none !important;
+  margin: 0 0 5px;
+  padding:0;
+  width: 67%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 5px;
+  color: black;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+  color:black;
+}
+
+#contact textarea {
+    float: left;
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: black;
+  color: white;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+#icons {
+margin-top: 30px;
+margin-left: 30px;
+}
+#hamburger{
+    opacity: 0;
+    visibility: hidden;
+}
+/*media Queries*/
+@media (min-width:1200px)
+{
+    
+}
+
+@media (max-width:990px){
+    
+}
+@media (max-width:800px)
+{
+#menu_list ul 
+ {
+     border-right: 0px;
+     opacity:0;
+     visibility: hidden;
+ }
+ #menu_list ul li.show{
+     opacity:1;
+     visibility: visible;
+ }
+ #hamburger
+ {
+     color: black;
+     background: transparent;
+     font-size:4rem;
+    position: fixed;
+     opacity: 1;
+     visibility: visible;
+     margin-top:10px;
+     left:0px;
+ }
+ #hamburger:hover
+ {
+     color: white;
+ }
+ #name
+ {
+     margin-left:30%;
+     width:40%;
+ }
+ @keyframes movename
+{
+    from{
+        width:0%;
+        margin
+    }
+    to{
+        width:40%;
+    }
+}
+#name1{
+    margin-left: 20%;
+    padding-top: 20%;
+}
+ #occup
+{
+   margin-top: 2%;    
+}
+
+#aboutme
+{
+    transform: rotate(0deg);
+    padding-top: 0%;
+    margin-top: 10%;
+    margin-left: 26%;
+}
+#intro
+{
+    margin-left: 20%;
+    width:70%;
+    margin-top: 10%;
+}
+h1
+{
+    text-decoration: underline;
+    font-size: 20px;
+    margin-left: 140px;
+}
+.wrapper
+{
+    padding-top: 4%;
+    width: 100%;
+    height: 675px;
+}
+.wrapper2{
+    background-color:transparent;
+    margin-left: 420px;
+    border:2px solid black;
+    width:46%;
+    margin-top: 80px;
+    height:150px;
+}
+#birth{
+    
+   font:19px monospace;
+  float: left;
+  margin-top: 3.5%;
+  margin-left: 140px;
+}
+#school{
+    
+   font:19px monospace;
+   float: left;
+  margin-top: 3.5%;
+}
+#graduation{
+    
+   font:19px monospace;
+   float:left;
+  margin-top: 3.5%;
+}
+h2{
+    margin-top: 1px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.details
+{
+    margin-top: 25px;
+    margin-left: 5px;
+      float: left;
+}
+.details2
+{
+    border-left:2px solid black;
+   padding-top: 25px;
+  margin-left: 300px;
+}
+#graddetail{
+    font: 20px monospace;
+    color: black;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#postgraduation{
+    float:left;
+   font:19px monospace;
+  margin-top: 3.5%;
+}
+#postgraddetail{
+    font: 20px monospace;
+    margin-left: 8%;
+    color: black;
+}
+#freelancer{
+    
+   font:19px monospace;
+  top: 50%;
+  left: 50%;
+  margin-top:5%;
+}
+.vertical-line {
+  width: 2px;
+  height: 150px;
+  background: black;
+  margin: 2px auto 0 auto;
+}
+
+hr {
+    margin-top: 4.2%;
+    float: left;
+  border: 0;
+  width:4%;
+  height: 4px;
+  background: black;
+}
+}
+@media (min-width:600px){
+    
+}
+@media screen and (max-width:600px){
+    #menu
+{
+    width: 40px;
+    height: 100%;
+    position: fixed;
+    border-right:2px solid black;
+    list-style: none;
+   padding-top: 2%;
+   margin-top: 0px;
+        box-shadow: 0 0 3px white inset;
+        opacity: 0.7;
+        animation: fadeInAnimation ease 4s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+      
+     
+}
+#menu li a
+{
+    padding-left: 0px;
+  margin-bottom: 15px;
+  padding-top:0px;
+  display:inline-block;
+  text-decoration: none;
+  font:20px bolder monospace;
+      color:white;
+  padding: 10px 0;
+       
+}
+a:hover {
+    transition: 0.5s ease;
+    border-top:2px solid black;
+    border-bottom: 2px solid black;
+  margin-left: 0px;
+  padding-left: 23px;
+       width:auto;
+}
+    #name1
+{
+ animation: fadeInAnimation ease 4s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards;   
+	padding-top:42%;
+	list-style:none;
+	margin-left: 35%;
+	font-size:32px;
+	color:black;
+	font-family:monospace;
+}
+#name
+{
+    
+    width:50%;
+    margin-left: 35%;
+    margin-top: 35px;
+    padding-top: 10px;
+    height:60px;
+    border: 11px black;
+    background: transparent;
+    box-shadow: 8px 8px 8px 8px black;
+	list-style:none;
+	text-align:center;
+	font-size:35px;
+	color: black;
+	font-family:monospace;
+        font-weight: 9400;
+        animation: movename 3s ease-out ;
+}
+@keyframes movename
+{
+    from{
+        width:0%;
+        margin
+    }
+    to{
+        width:30%;
+    }
+}
+#occup
+{
+	list-style:none;
+        margin-left: 27%;
+	text-align:center;
+	font-size:16px;
+	color:black;
+	padding-top:8%;
+	font-family:monospace;
+        animation: fadeInAnimation ease 4s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+#aboutme
+{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 100px;
+   margin-left: 35%;
+   transform:rotate(0deg);
+    text-shadow: 2px 2px black;
+   /*animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;*/
+}
+@keyframes typing {
+  from { width: 0% }
+  to { width: 73% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: transparent; }
+}
+#intro
+{
+    width:61%;
+    margin-left: 29%;
+    border:2px solid grey;
+    text-align: justify;
+    font:14px monospace;
+    margin-top: 50px;
+    box-shadow: 4px 6px 6px 6px grey;
+}
+h1
+{
+    text-decoration: underline;
+    font-size: 20px;
+    margin-left: 100px;
+}
+.wrapper
+{
+    padding-top: 4%;
+    width: 100%;
+    height: 675px;
+}
+.wrapper2{
+    background-color:transparent;
+    margin-left: 420px;
+    border:2px solid black;
+    width:46%;
+    margin-top: 80px;
+    height:150px;
+}
+#birth{
+    
+   font:19px monospace;
+  float: left;
+  margin-top: 3.5%;
+  margin-left: 100px;
+}
+#school{
+    
+   font:19px monospace;
+   float: left;
+  margin-top: 3.5%;
+}
+#graduation{
+    
+   font:19px monospace;
+   float:left;
+  margin-top: 3.5%;
+}
+h2{
+    margin-top: 1px;
+    margin-left: 20px;
+    text-decoration: underline;
+}
+.details
+{
+    margin-top: 25px;
+    margin-left: 5px;
+      float: left;
+}
+.details2
+{
+    border-left:2px solid black;
+   padding-top: 25px;
+  margin-left: 300px;
+}
+#graddetail{
+    font: 20px monospace;
+    color: black;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#postgraduation{
+    float:left;
+   font:19px monospace;
+  margin-top: 3.5%;
+}
+#postgraddetail{
+    font: 20px monospace;
+    margin-left: 8%;
+    color: black;
+}
+#freelancer{
+    
+   font:19px monospace;
+  top: 50%;
+  left: 50%;
+  margin-top:5%;
+}
+.vertical-line {
+  width: 2px;
+  height: 150px;
+  background: black;
+  margin: 2px auto 0 auto;
+}
+
+hr {
+    margin-top: 4.2%;
+    float: left;
+  border: 0;
+  width:4%;
+  height: 4px;
+  background: black;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 100 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  
+}
+#contact1{
+    width: 45%;
+    height:350px;
+    background-color:transparent;
+    color: black;
+    border: 1px solid;
+    box-shadow: 0px 0px 8px;
+    font:  18px monospace;
+ padding-top: 0px;
+ padding-left: 11%;
+ margin-left: 30%;
+ margin-top: 0px;
+ transform: rotate(-0deg);
+ border-radius: 15%;
+}
+#contact2{
+    border-radius: 15%;
+    width: 95%;
+    height:250px;
+    background-color:transparent;
+    color: black;
+    border: 1px solid;
+    box-shadow: 0px 0px 8px;
+    font:  17px monospace;
+ margin-top: 20px;
+ transform: rotate(-0deg);
+    padding-left:0%;
+    padding-top: 0%;
+    margin-left: 0%;
+ 
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact fieldset {
+      background: transparent;
+   border:1px solid; 
+  border: medium none !important;
+  margin: 0 0 5px;
+  padding:0;
+  width: 70%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 2px;
+  color: black;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+  color:black;
+}
+
+#contact textarea {
+    float: left;
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: black;
+  color: white;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+#icons {
+margin-top: 30px;
+margin-left: 30px;
+}
+}
+     

@@ -1,0 +1,685 @@
+<html lang="en" class="animated fadeIn">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+
+<style type="text/css">
+html
+{
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+body
+{
+}
+/*SLIDE1*/
+
+.slide1
+{
+
+  font-family: "Roboto Mono", sans-serif;
+   
+    vertical-align: middle;
+    }
+    .hamburgermenu
+    {
+      display: none;
+
+    }
+#sidebar-wrapper {
+    margin-left: -150px;
+    left: 70px;
+    width: 70px;
+    position: fixed;
+}
+
+.sidebar-nav {
+
+    display: block;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-nav
+{
+    margin-top: 130px;
+    opacity: 0.9;
+}
+
+.sidebar-nav li a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    width: 120px;
+    border-top: 2px solid #373737;
+    border-bottom: 2px solid #1A1A1A;
+}
+
+.sidebar-nav li {
+  text-indent: 30px;
+}
+
+.sidebar-nav li a:hover {
+  color: #fff;
+  
+  text-decoration: none;
+  border-right: 5px solid #f0ad4e;
+  border-bottom: 5px solid #f0ad4e;
+  animation-name: slide-right;
+
+}
+
+.active{
+ border-right: 5px solid #f0ad4e;
+  border-bottom: 5px solid #f0ad4e;
+}
+.arrow-container{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+}
+
+.arrow-2{
+  width: 100px;
+  height: 60px;
+  position: absolute;
+  left: 20px;
+  display: table;
+}
+
+
+.arrow-2 i.fa{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.heading2
+{
+  font-size: 6vh;
+}
+/* Custom Animate.css */
+
+.headname
+{
+  font-size: 7vh;
+  border-top: 2px solid white;
+    border-bottom: 2px solid white;
+letter-spacing: .14em; /* Adjust as needed */
+}
+.occup
+{
+  font-size: 2vh;
+}
+.heading1{
+   font-size: 4vmax;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  
+  animation: 
+    typing 5.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+#button {
+  display: inline-block;
+  background-color: #f0ad4e;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom:30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #292b2c;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*START SLIDE1*/
+
+#slide2
+{
+  background-image: url('images/bakground.png');
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+.Pageabout
+{
+  line-height: 2.0em;
+
+}
+
+.headingabout
+{
+   font-size: 6vmin;
+}
+
+.headingabout:first-letter
+{
+   font-size: 180%;
+   font-weight: 900;
+  color: #f0ad4e;
+}
+
+
+/*END SLIDE2*/
+
+/*START SLIDE3*/
+
+.headingedu
+{
+  font-size: 6vmin;
+}
+
+/*END SLIDE3*/
+
+/*START SLIDE4*/
+
+#slide3
+{
+  font-family: "Roboto Mono", sans-serif;
+}
+#slide4
+{
+font-family: "Roboto Mono", sans-serif;
+width: 100%;
+height: 100%;
+background-image: url('images/bakground.png');
+background-attachment: fixed;
+background-size: cover;
+}
+
+/*END SLIDE4*/
+
+/*START SLIDE5*/
+.progress-bar
+{
+  opacity:0.8;
+}
+
+/*END SLIDE5*/
+.slide5
+{
+  font-family: "Roboto Mono", sans-serif;
+}
+
+.progress .progress-bar {
+    animation-name: animateBar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: .9s;
+}
+@keyframes animateBar {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+
+#slide5
+{
+
+}
+/*START SLIDE6*/
+#slide6
+{
+  padding-top: 8%;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/bakground.png');
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Roboto Mono", sans-serif;
+}
+
+.section
+{
+  position: relative;
+  margin: 60px;
+}
+.section h1
+{
+  position: relative;
+  margin-top: -24px;
+  display: inline-block;
+  letter-spacing: 4px;
+}
+
+.top-border
+{
+  position: absolute;
+  height: 3px;
+  width: 24%;
+}
+.right {
+  right: 0;
+}
+
+.left {
+  left: 0;
+}
+
+/*END SLIDE6*/
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 955px)
+{
+  #wrapper.toggled #sidebar-wrapper {
+    width: 100%;
+
+}
+
+.sidebar-nav {
+    position: absolute;
+    width: 100%;
+}
+
+.sidebar-nav li {
+    position: relative; 
+    display: none;
+   }
+   .hamburgermenu
+   {
+    display: inline-block;
+    padding-top: 25%;
+    float: left;
+
+   }
+    #slide2
+  {
+   height: auto;
+  }
+
+  .top-border
+   { 
+    width:13%;
+   }
+
+  .section
+  {
+    border-top: 2px solid #333;
+  }
+  .section h1
+  {
+    margin: 20px 6px;
+  }
+  .address
+  {
+   margin-top: 0px;
+  }
+}
+
+@media (max-width: 1180px) {
+.top-border { 
+  width: 18%;
+  }
+}
+
+
+.section a {
+  outline: 0;
+  display: inline-block;
+  padding: 20px;
+  margin-bottom: 40px;
+  width: 440px;
+  max-width: 80%;
+  background-color: #333;
+  color: #fff;
+  font-size: 22px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+}
+
+.section a:hover {
+  background-color: #1D222D;
+}
+
+.section a:link, .section a:visited, .section a:link:hover, .section a:visited:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+</style>
+
+<script type="text/javascript">var scrolltotop={setting:{startline:100,scrollto:0,scrollduration:1e3,fadeduration:[500,100]},controlHTML:'<img src="https://i1155.photobucket.com/albums/p559/scrolltotop/arrow55.png" />',controlattrs:{offsetx:5,offsety:5},anchorkeyword:"#top",state:{isvisible:!1,shouldvisible:!1},scrollup:function(){this.cssfixedsupport||this.$control.css({opacity:0});var t=isNaN(this.setting.scrollto)?this.setting.scrollto:parseInt(this.setting.scrollto);t="string"==typeof t&&1==jQuery("#"+t).length?jQuery("#"+t).offset().top:0,this.$body.animate({scrollTop:t},this.setting.scrollduration)},keepfixed:function(){var t=jQuery(window),o=t.scrollLeft()+t.width()-this.$control.width()-this.controlattrs.offsetx,s=t.scrollTop()+t.height()-this.$control.height()-this.controlattrs.offsety;this.$control.css({left:o+"px",top:s+"px"})},togglecontrol:function(){var t=jQuery(window).scrollTop();this.cssfixedsupport||this.keepfixed(),this.state.shouldvisible=t>=this.setting.startline?!0:!1,this.state.shouldvisible&&!this.state.isvisible?(this.$control.stop().animate({opacity:1},this.setting.fadeduration[0]),this.state.isvisible=!0):0==this.state.shouldvisible&&this.state.isvisible&&(this.$control.stop().animate({opacity:0},this.setting.fadeduration[1]),this.state.isvisible=!1)},init:function(){jQuery(document).ready(function(t){var o=scrolltotop,s=document.all;o.cssfixedsupport=!s||s&&"CSS1Compat"==document.compatMode&&window.XMLHttpRequest,o.$body=t(window.opera?"CSS1Compat"==document.compatMode?"html":"body":"html,body"),o.$control=t('<div id="topcontrol">'+o.controlHTML+"</div>").css({position:o.cssfixedsupport?"fixed":"absolute",bottom:o.controlattrs.offsety,right:o.controlattrs.offsetx,opacity:0,cursor:"pointer"}).attr({title:"Scroll to Top"}).click(function(){return o.scrollup(),!1}).appendTo("body"),document.all&&!window.XMLHttpRequest&&""!=o.$control.text()&&o.$control.css({width:o.$control.width()}),o.togglecontrol(),t('a[href="'+o.anchorkeyword+'"]').click(function(){return o.scrollup(),!1}),t(window).bind("scroll resize",function(t){o.togglecontrol()})})}};scrolltotop.init();</script>
+<noscript>Not seeing a <a href="https://www.scrolltotop.com/">Scroll to Top Button</a>? Go to our FAQ page for more info.</noscript>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!--JQUERY LIBRARY-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+     <!--ICON LIBRARY-->
+    <script src="https://use.fontawesome.com/e878c42a76.js"></script>
+   
+</head>
+
+<body>
+
+  <!--HOMEPAGE--->
+  <div class="slide1 bg-dark w-100 vh-100">
+<div id="wrapper">
+    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+     <ul class="nav sidebar-nav text-uppercase bg-light">
+       <li>
+<a class ="nav-link text-center text-dark " href="#" title="Home">
+  <span class="fa fa-home fa-lg "></span></a>
+</li>
+
+<li>
+<a class ="nav-link text-center text-dark" href="#slide2" title="About me">
+  <span class="fa fa-user fa-lg"></span></a>
+</li>
+
+<li>
+<a class ="nav-link text-center text-dark" href="#slide3" title="Education">
+  <span class=" fa fa-graduation-cap fa-lg"></span></a>
+</li>
+
+<li>
+<a class ="nav-link text-center text-dark" href="#slide4" title="Projects">
+  <span class="fa fa-briefcase fa-lg"></span></a>
+</li>
+
+<li>
+<a class ="nav-link text-center text-dark" href="#slide5" title="Skills">
+  <span class="fa fa-code fa-lg"></span></a>
+</li>
+
+<li>
+<a class ="nav-link text-center text-dark" href="#slide6" title="Contact">
+<span class="fa fa-paper-plane fa-lg "></span></a>
+</li>
+
+      </ul>
+  </nav></div>
+   <div class="hamburgermenu text-light ml-3"><i class="fa fa-bars fa-2x"></i></div>
+        <!-- END sidebar-wrapper -->
+<div class="heading1 text-center pt-5 pb-5 text-light ">Welcome To My Portfolio<font color=#f0ad4e>!!!!</font></div>
+<div class="heading2 text-center text-light pt-3 pb-5">I<font color=#f0ad4e>'</font>m</div>
+
+<div class= "headname animated delay-1s pulse text-center font-weight-bold text-warning mx-auto w-50 mt-3 pt-2 ">MANU
+<div class=" occup pt-3 pb-3 text-light">Professional web & Graphic Designer.</div></div>
+
+            
+  <!--ANIMATED ARROW-->
+  <a href="#slide2"><div class="arrow-container mx-auto text-light">
+  <div class="arrow-2 mx-auto bg-warning">
+    <i class="fa fa-angle-down fa-2x"></i>
+  </div>
+   <!--END ANIMATED ARROW-->
+  </div></div></div></div>
+<!-- Back to top button -->
+<a id="button"></a></a></div>
+   <!---END HOMEPAGE--->
+
+   <!---START ABOUT PAGE-->
+   <div id="slide2">
+    
+    <div class="Pageabout w-50 text-justify mx-auto mt-5">
+   <div class="heading text-dark pt-5 pb-1 "> 
+        <div class="headingabout text-left ">ABOUT ME 
+        </div></div>
+    <div class="aboutintro text-white mt-5 pl-4 pr-4 pt-4 pb-4 border border-5 border-warning ">
+          With a passion for business, social media, and all things marketing,I have both the skill set and professional background necessary to dive deep into the marketing world. As an upbeat, self-motivated team player with excellent communication, I envision an exciting future in the industry. Browse my site to see all that I have to offer.
+        With a passion for business, social media, and all things marketing, I have both the skill set and professional background necessary to dive deep into the marketing world. As an upbeat, self-motivated team player with excellent communication.
+
+        </div>
+        <div class="button mt-5 text-center">
+         <a href="Resume.pdf"><button class="button bg-dark w-50 pt-3 pb-3 h5 text-white" >DOWNLOAD CV</button></a>
+      </div></div></div>
+       <!---END ABOUT PAGE-->
+
+<!--START EDUCATION PAGE-->
+       
+<div id="slide3">
+  <div class="Pageeducation w-100 vh-100 bg-dark">  
+    <div class="heading"> 
+      <div class="headingedu text-center text-light pt-4 pb-4 ">Long Story Short<font color="#f0ad4e">!!!!!</font></div></div>
+          <hr class="horizontalline w-25 bg-light mx-auto mt-3">
+
+
+         <div class="school mt-4 text-center">
+         <div class="schooldetail1 text-center text-warning pt-3 pb-3">
+            <H4> High School</h4>
+          <div class="schooldetail2 text-light">
+            PSEB (2006 - 2010)
+        </div>
+      </div>
+      <hr class="horizontalline w-25 bg-light mx-auto">
+
+         <div class="graduation">
+          <div class="graddetails1 text-center te text-warning pt-3 pb-3">
+            <H4> Graduation</h4>
+            <div class="graddetails2 text-light">
+            BACHELOR'S OF COMPUTER <br>APPLICATIONS.<br> (2006 - 2010)
+        </div>
+      </div>
+      <hr class="horizontalline w-25 bg-light mx-auto">
+    
+         <div class="postgraduation ">
+          <div class="pgdetails1 text-center text-warning pt-3 pb-3 ">
+           <H4>Post-Grad</h4>
+           <div class="pgdetail2 text-light">
+            MASTER'S OF COMPUTER <br>APPLICATIONS.<br>(2006 - 2010)
+        </div>
+      </div>
+      <hr class="horizontalline w-25 bg-light mx-auto mb-5"></div></div></div></div>
+    
+    <!--END EDUCATION PAGE-->
+
+    <!--START PROJECTS PAGE--->
+    <div id="slide4">
+    </div>
+        
+        <div id="slide5">
+            <div class="progresspage bg-dark w-100 h-100">
+       <div class="skillbox w-50  pl-5 pr-3 pt-5 pb-5  mx-auto text-light">
+        <i class="fa fa-html5 pb-3 text-warning text-left" aria-hidden="true"></i> HTML
+       <div class="progress bg-dark mb-4">
+  <div class="progress-bar bg-warning "
+   role="progressbar" style="width: 90%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90%</div>
+</div>
+<i class="fa fa-css3 pb-3 pt-3 text-warning" aria-hidden="true"></i> CSS/SCSS
+<div class="progress bg-dark mb-4">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+</div>
+<i class="fa fa-jsfiddle text-warning pb-3 pt-3" aria-hidden="true"></i> JAVASCRIPT/JQUERY
+<div class="progress bg-dark mb-4">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">65%</div>
+</div>
+<i class="fa fa-laptop text-warning pb-3 pt-3" aria-hidden="true"></i> BOOTSTRAP 
+<div class="progress bg-dark mb-4">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+</div>
+<i class="fa fa-laptop text-warning pb-3 pt-3" aria-hidden="true"></i>ILLUSTRATOR/PHOTOSHOP
+<div class="progress bg-dark mb-4">
+  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">75%</div>
+
+
+</div>
+ <i class="fa fa-html5 pb-3 text-warning text-left" aria-hidden="true"></i> HTML
+<div class="progress bg-dark mb-4">
+  <div class="progress-bar bg-warning "
+   role="progressbar" style="width: 90%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90%</div>
+</div>
+       </div>
+          
+</div</div></div>
+  <!--END SKILLS PAGE-->
+
+  <!--START CONTACT PAGE-->
+
+<div id="slide6">
+  <div class="section w-50 text-center mx-auto text-dark border border-2 border-top-0 border-warning">
+   <div class="top-border left bg-warning "></div>
+   <div class="top-border right bg-warning"></div>
+   <h1>GET IN TOUCH</h1>
+   <div class="contactdetails">
+     <i class="fa fa-envelope fa-2x text-dark pt-3 pb-2" ></i><div class="contactmail h5 text-dark">manu@sujjon.in</div>
+     <i class="fa fa-phone-square fa-3x  pt-3 text-dark"></i>
+     <div class="contactphone h5 text-dark">+61 - 490460620 &nbsp;&nbsp;</div>
+     <div class="button mt-5 text-center">
+         <a href="Resume.pdf">DOWNLOAD CV</button></a>
+      </div>
+</div></section></div>
+ 
+ <!--END CONTACT PAGE--->      
+
+<script>
+        function Circlle(el){
+  $(el).circleProgress({})
+    .on('circle-animation-progress', function(event, progress, stepValue){
+    $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
+    });  
+};
+Circlle('.round');</script>
+
+<script type="text/javascript">
+  var $alert = $('.alert');
+var $circleprogressBar = $('.circleprogressBar');
+
+var circleprogress = 0;      // initial value of your progress bar
+var timeout = 10;      // number of milliseconds between each frame
+var increment = .5;    // increment for each frame
+var maxprogress = 70; // when to leave stop running the animation
+
+function animate() {
+    setTimeout(function () {
+        circleprogress += increment;
+        if(circleprogress < maxprogress) {
+            $cirlceprogressBar.attr('value', circleprogress);
+            animate();
+        } else {
+            $circleprogressBar.css('display', 'none');
+            $alert.css('display', 'block');
+        }
+    }, timeout);
+};
+animate();
+</script>
+<script>
+  $(".heading1").delay(1100);
+$(".heading1").typeText({
+  typeSpeed: 80,
+  delay:1000,
+  lineWait: 100,
+});
+
+</script>
+<script>
+  var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+</script>
+<script>
+  $(document).ready(function() {
+
+ // Get current page URL
+ var url = window.location.href;
+
+ // remove # from URL
+ url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
+
+ // remove parameters from URL
+ url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
+
+ // select file name
+ url = url.substr(url.lastIndexOf("/") + 1);
+ 
+ // If file name not avilable
+ if(url == ''){
+ url = 'index.html';
+ }
+ 
+ // Loop all menu items
+ $('.nav-link li').each(function(){
+
+  // select href
+  var href = $(this).find('a').attr('href');
+ 
+  // Check filename
+  if(url == href){
+
+   // Add active class
+   $(this).addClass('active');
+  }
+ });
+});
+</script>
+    </body>
+</html>
