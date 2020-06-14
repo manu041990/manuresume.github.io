@@ -2,193 +2,252 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&amp;display=swap" rel="stylesheet">
 
 <style type="text/css">
 html
 {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
-
-body
+  
+* 
 {
-}
-/*SLIDE1*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 
+}
 .slide1
 {
-
-  font-family: "Roboto Mono", sans-serif;
-   
-    vertical-align: middle;
-    }
-    .hamburgermenu
-    {
-    display:none;
-
-    }
-#sidebar-wrapper {
-    margin-left: -150px;
-    left: 70px;
-    width: 70px;
-    position: fixed;
+  position:;
+  z-index: -10;
+font-family: "Roboto Mono", sans-serif;
 }
+.slide2
+{
+  position: ;
+  z-index: -1;
+font-family: "Roboto Mono", sans-serif;
+}
+.slide3
+{
+font-family: "Roboto Mono", sans-serif;
+}
+.slide4
+{
+font-family: "Roboto Mono", sans-serif;
+}
+.slide5
+{
+font-family: "Roboto Mono", sans-serif;
+}
+.slide6
+{
+font-family: "Roboto Mono", sans-serif;
+}
+.slide1
+{
+font-family: "Roboto Mono", sans-serif;
+}
+
+/*SLIDE1*/
+
+#wrapper {
+
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+
+#sidebar-wrapper {
+
+  
+    width: 0;
+    height: 66%;
+    margin-top: 7%;
+    margin-left: -32px;
+    text-align:center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 90px;
+}
+
+/*-------------------------------*/
+/*     Sidebar nav styles        */
+/*-------------------------------*/
 
 .sidebar-nav {
-
-    display: block;
-    float: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar-nav
-{
-    margin-top: 130px;
-    opacity: 0.9;
-}
-
-.sidebar-nav li a {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: block;
-    float: left;
-    text-decoration: none;
-    width: 120px;
-    border-top: 2px solid #373737;
-    border-bottom: 2px solid #1A1A1A;
+  padding-top: 10%;
+  text-align: center;
+    position: absolute;
 }
 
 .sidebar-nav li {
-  text-indent: 30px;
+    width: 100%;
 }
 
-.sidebar-nav li a:hover {
-  color: #fff;
+.sidebar-nav li a:hover
+{
+  border-top: 4px solid #292b2c;
+  border-bottom: 4px solid #292b2c;
+  padding: 0px 0;  
+  transition: 0.90s ease;
+}
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+
+.hamburger 
+  {
+  width: 32px;
+  height: 36px;
+  }
+.hamburger:focus,
+.hamburger:active {
+   outline: none;
+}
+
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom
+{
+  cursor: pointer;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  cursor: pointer;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+
+}
+
+.hamburger.is-closed .hamb-top { 
+  top: 5px; 
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed .hamb-middle {
+  top: 50%;
+  margin-top: -2px;
+}
+.hamburger.is-closed .hamb-bottom {
+  bottom: 5px;  
+  -webkit-transition: all .35s ease-in-out;
+}
+
+.hamburger.is-closed:hover .hamb-top {
+  top: 0;
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-closed:hover .hamb-bottom {
+  bottom: 0;
+  -webkit-transition: all .35s ease-in-out;
+}
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-bottom {
+  top: 50%;
+  margin-top: -2px; 
+
+
+}
+.hamburger.is-open .hamb-top { 
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+.hamburger.is-open .hamb-middle { display: none; }
+.hamburger.is-open .hamb-bottom {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform .2s cubic-bezier(.73,1,.28,.08);
+}
+/*END MENU LINK TRANSITION*/
   
-  text-decoration: none;
-  border-right: 5px solid #f0ad4e;
-  border-bottom: 5px solid #f0ad4e;
-  animation-name: slide-right;
-
+.arrow
+{
+  transform: translate(-50%,-50%);
 }
 
-.active{
- border-right: 5px solid #f0ad4e;
-  border-bottom: 5px solid #f0ad4e;
-}
-.arrow-container{
-  height: 100px;
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-  right: 0;
-}
-
-.arrow-2{
-  width: 100px;
-  height: 60px;
-  position: absolute;
-  left: 20px;
-  display: table;
+.arrow span
+{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 4px solid white;
+  border-right: 4px solid white;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
 }
 
-
-.arrow-2 i.fa{
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
+.arrow span:nth-child(2)
+{
+  animation-delay: -0.2s;
 }
+
+.arrow span:nth-child(3)
+{
+  animation-delay: -0.4s;
+}
+
+@keyframes animate
+ {
+  0%
+  {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px,-20px);
+  }  
+
+  50%
+  {
+    opacity: 1;
+  }
+
+  100%
+  {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+.heading1
+{
+  font-size: 8vmin;
+}
+ 
 .heading2
 {
-  font-size: 6vh;
+  font-size: 9vmin;
 }
-/* Custom Animate.css */
 
 .headname
 {
-  font-size: 7vh;
-  border-top: 2px solid white;
-    border-bottom: 2px solid white;
-letter-spacing: .14em; /* Adjust as needed */
+  font-size: 8vmin;
+  box-shadow: 0px 3px 8px 5px ;
+  letter-spacing: 0.6em;
 }
+
 .occup
 {
-  font-size: 2vh;
-}
-.heading1{
-   font-size: 4vmax;
-  text-align: center;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  
-  animation: 
-    typing 5.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
+  font-size: 1vw;
+  letter-spacing: 0.8em;
 
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
-}
-#button {
-  display: inline-block;
-  background-color: #f0ad4e;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 4px;
-  position: fixed;
-  bottom:30px;
-  right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-#button::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #292b2c;
-}
-#button:hover {
-  cursor: pointer;
-  background-color: #333;
-}
-#button:active {
-  background-color: #555;
-}
-#button.show {
-  opacity: 1;
-  visibility: visible;
 }
 
 /*START SLIDE1*/
-
-#slide2
-{
-  background-image: url('images/bakground.png');
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  font-family: "Roboto Mono", sans-serif;
-}
 
 .Pageabout
 {
@@ -198,89 +257,84 @@ letter-spacing: .14em; /* Adjust as needed */
 
 .headingabout
 {
-   font-size: 6vmin;
+  font-size: 7vmin;
+   letter-spacing: 0.2em;
+
 }
 
-.headingabout:first-letter
+.headingabout::first-letter {
+  font-size: 13vmin;
+}
+.btn
 {
-   font-size: 180%;
-   font-weight: 900;
-  color: #f0ad4e;
+  cursor:pointer;
 }
-
-
 /*END SLIDE2*/
 
 /*START SLIDE3*/
 
 .headingedu
 {
-  font-size: 6vmin;
+  font-size: 8vmin;
+  letter-spacing: 0.2em;
 }
 
 /*END SLIDE3*/
 
 /*START SLIDE4*/
 
-#slide3
-{
-  font-family: "Roboto Mono", sans-serif;
-}
-#slide4
-{
-font-family: "Roboto Mono", sans-serif;
-width: 100%;
-height: 100%;
-background-image: url('images/bakground.png');
-background-attachment: fixed;
-background-size: cover;
-}
+
 
 /*END SLIDE4*/
 
 /*START SLIDE5*/
-.progress-bar
+
+div.meter span {
+  height: 3px;
+  animation: grower 1s linear;
+  -moz-animation: grower 1s linear;
+  -webkit-animation: grower 1s linear;
+  -o-animation: grower 1s linear;
+  
+  
+  
+}
+div.progress span
 {
-  opacity:0.8;
+  height: px;
+}
+
+@keyframes grower {
+  0% {
+    width: 0%;
+  }
+}
+
+@-moz-keyframes grower {
+  0% {
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes grower {
+  0% {
+    width: 0%;
+  }
+}
+
+@-o-keyframes grower {
+  0% {
+    width: 0%;
+  }
 }
 
 /*END SLIDE5*/
-.slide5
-{
-  font-family: "Roboto Mono", sans-serif;
-}
 
-.progress .progress-bar {
-    animation-name: animateBar;
-    animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
-    animation-duration: .9s;
-}
-@keyframes animateBar {
-    0% {transform: translateX(-100%);}
-    100% {transform: translateX(0);}
-}
-
-#slide5
-{
-
-}
 /*START SLIDE6*/
 #slide6
 {
-  padding-top: 8%;
-  width: 100%;
-  height: 100%;
-  background-image: url('images/bakground.png');
-  background-attachment: fixed;
-  background-size: cover;
-  font-family: "Roboto Mono", sans-serif;
-}
-
-.section
-{
-  position: relative;
-  margin: 60px;
+position: relative;
+  
 }
 .section h1
 {
@@ -290,18 +344,21 @@ background-size: cover;
   letter-spacing: 4px;
 }
 
-.top-border
+.top-border-left
 {
   position: absolute;
   height: 3px;
-  width: 24%;
-}
-.right {
-  right: 0;
+  float: left;
+  width: 15%;
+  background-color: white;
 }
 
-.left {
-  left: 0;
+.top-border-right
+{
+  float: right;
+  height: 3px;
+  width: 15%;
+  background-color: white;
 }
 
 /*END SLIDE6*/
@@ -322,14 +379,7 @@ background-size: cover;
 
 .sidebar-nav li {
     position: relative; 
-    display: none;
-   }
-   .hamburgermenu
-   {
     display: inline-block;
-    padding-top: 25%;
-    float: left;
-
    }
     #slide2
   {
@@ -396,7 +446,6 @@ background-size: cover;
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
@@ -409,99 +458,103 @@ background-size: cover;
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-     <!--ICON LIBRARY-->
+    <!--ICON LIBRARY-->
     <script src="https://use.fontawesome.com/e878c42a76.js"></script>
-   
 </head>
 
 <body>
 
   <!--HOMEPAGE--->
-  <div class="slide1 bg-dark w-100 vh-100">
-<div id="wrapper">
-    <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
-     <ul class="nav sidebar-nav text-uppercase bg-light">
+  <div class="slide1 bg-dark w-100 h-100">
+ 
+        
+    
+
+<div class="heading2 animated fadeInDown slow text-center text-light pt-5 pb-5">Hello, I<font color=white>'</font>m</div>
+<div class= "headname w-50 animated fadeInDown slow text-center text-warning mx-auto mt-4 pt-3 font-weight-bold ">MANU
+<div class=" occup text-light pb-4 ">PROFESSINAL WEB DESIGNER.</div></div>
+<div class="heading1 animated fadeInDown slow text-center pt-5 mt-5 text-light pulse">Welcome to my portfolio!!!</div>
+            
+  
+  </div>
+
+   <!---END HOMEPAGE--->
+<div class="slide2 bg-light w-100">
+  <div class="heading text-dark font-weight-bold "> 
+        <div class="headingabout animated fadeInDown slow text-center  ">ABOUT <span class= "metext w-25 h-50 pl-2 pr-2 text-center mx-auto bg-warning">ME </div>
+        </div></div>
+</div>
+   <!---START ABOUT PAGE-->
+  <div class="slide2 bg-dark w-100 vh-100">
+       <div id="wrapper">
+        <!-- Sidebar -->
+    <nav class="navbar navbar-inverse fixed-top bg-warning" id="sidebar-wrapper" role="navigation">
+     <ul class="nav sidebar-nav text-uppercase ">
        <li>
-<a class ="nav-link text-center text-dark " href="#" title="Home">
-  <span class="fa fa-home fa-lg "></span></a>
+<a class ="nav-link text-dark" href="#">
+  <span class="fa fa-home fa-lg pt-3 pb-3 text-dark"></span></a>
 </li>
 
 <li>
-<a class ="nav-link text-center text-dark" href="#slide2" title="About me">
-  <span class="fa fa-user fa-lg"></span></a>
+<a class ="nav-link text-dark" href="#slide2">
+  <span class="fa fa-user fa-lg pt-3 pb-3 text-dark"></span></a>
 </li>
 
 <li>
-<a class ="nav-link text-center text-dark" href="#slide3" title="Education">
-  <span class=" fa fa-graduation-cap fa-lg"></span></a>
+<a class ="nav-link text-dark" href="#slide3">
+  <span class=" fa fa-graduation-cap fa-lg pt-3 pb-3 text-dark"></span></a>
 </li>
 
 <li>
-<a class ="nav-link text-center text-dark" href="#slide4" title="Projects">
-  <span class="fa fa-briefcase fa-lg"></span></a>
+<a class ="nav-link text-dark" href="#slide4">
+  <span class="fa fa-briefcase fa-lg pt-3 pb-3 text-dark"></span></a>
 </li>
 
 <li>
-<a class ="nav-link text-center text-dark" href="#slide5" title="Skills">
-  <span class="fa fa-code fa-lg"></span></a>
+<a class ="nav-link text-dark" href="#slide5">
+  <span class="fa fa-code fa-lg pt-3 pb-3 text-dark"></span></a>
 </li>
 
 <li>
-<a class ="nav-link text-center text-dark" href="#slide6" title="Contact">
-<span class="fa fa-paper-plane fa-lg "></span></a>
+<a class ="nav-link text-dark" href="#slide6">
+<span class="fa fa-paper-plane fa-lg pt-3 pb-3 text-dark"></span></a>
 </li>
 
       </ul>
   </nav></div>
-   <div class="hamburgermenu text-light ml-3"><i class="fa fa-bars fa-2x"></i></div>
         <!-- END sidebar-wrapper -->
-<div class="heading1 text-center pt-5 pb-5 text-light ">Welcome To My Portfolio<font color=#f0ad4e>!!!!</font></div>
-<div class="heading2 text-center text-light pt-3 pb-5">I<font color=#f0ad4e>'</font>m</div>
-
-<div class= "headname animated delay-1s pulse text-center font-weight-bold text-warning mx-auto w-50 mt-3 pt-2 ">MANU
-<div class=" occup pt-3 pb-3 text-light">Professional web & Graphic Designer.</div></div>
-
-            
-  <!--ANIMATED ARROW-->
-  <a href="#slide2"><div class="arrow-container mx-auto text-light">
-  <div class="arrow-2 mx-auto bg-warning">
-    <i class="fa fa-angle-down fa-2x"></i>
-  </div>
-   <!--END ANIMATED ARROW-->
-  </div></div></div></div>
-<!-- Back to top button -->
-<a id="button"></a></a></div>
-   <!---END HOMEPAGE--->
-
-   <!---START ABOUT PAGE-->
-   <div id="slide2">
-    
-    <div class="Pageabout w-50 text-justify mx-auto mt-5">
-   <div class="heading text-dark pt-5 pb-1 "> 
-        <div class="headingabout text-left ">ABOUT ME 
-        </div></div>
-    <div class="aboutintro text-white mt-5 pl-4 pr-4 pt-4 pb-4 border border-5 border-warning ">
+<!-- START HAMBURGER CONTENT -->
+        <div class="page-content-wrapper text-dark">
+            <button type="button" class="hamburger animated fadeInLeft is-closed fixed-top bg-transparent border-0 mt-3 ml-0" data-toggle="offcanvas">
+                <span class="hamb-top bg-warning"></span>
+          <span class="hamb-middle bg-warning"></span>
+        <span class="hamb-bottom bg-warning"></span>
+            </button></div>
+        <!--END HAMBURGER CONTENT-->
+    <div class="Pageabout w-50 h-100 text-justify bg-light mx-auto pt-4">
+   
+    <div class="aboutintro text-dark pl-3 pr-3  pt-5">
           With a passion for business, social media, and all things marketing,I have both the skill set and professional background necessary to dive deep into the marketing world. As an upbeat, self-motivated team player with excellent communication, I envision an exciting future in the industry. Browse my site to see all that I have to offer.
         With a passion for business, social media, and all things marketing, I have both the skill set and professional background necessary to dive deep into the marketing world. As an upbeat, self-motivated team player with excellent communication.
 
         </div>
-        <div class="button mt-5 text-center">
-         <a href="Resume.pdf"><button class="button bg-dark w-50 pt-3 pb-3 h5 text-white" >DOWNLOAD CV</button></a>
-      </div></div></div>
+        <div class="cvbutton mt-5 text-center">
+      <a class="buttoncv bg-dark pt-4 pb-4" href="Resume"><button type="button" class="btn text-light w-50">DOWNLOAD RESUME</button></a>
+     </div>
+   </div></div>
        <!---END ABOUT PAGE-->
 
 <!--START EDUCATION PAGE-->
-       
 <div id="slide3">
   <div class="Pageeducation w-100 vh-100 bg-dark">  
-    <div class="heading"> 
-      <div class="headingedu text-center text-light pt-4 pb-4 ">Long Story Short<font color="#f0ad4e">!!!!!</font></div></div>
-          <hr class="horizontalline w-25 bg-light mx-auto mt-3">
+    <div class="slide3 bg-light w-100">    
+     <div class="heading"> 
+      <div class="headingedu text-center text-dark pt-4 pb-4 font-weight-bold ">Long Story Short!!!!!</div></div></div>
 
 
-         <div class="school mt-4 text-center">
-         <div class="schooldetail1 text-center text-warning pt-3 pb-3">
-            <H4> High School</h4>
+         <div class="school text-center">
+         <div class="schooldetail1 text-center text-warning pt-5 pb-2">
+            <H4> HIGH SCHOOL</h4>
           <div class="schooldetail2 text-light">
             PSEB (2006 - 2010)
         </div>
@@ -509,8 +562,8 @@ background-size: cover;
       <hr class="horizontalline w-25 bg-light mx-auto">
 
          <div class="graduation">
-          <div class="graddetails1 text-center te text-warning pt-3 pb-3">
-            <H4> Graduation</h4>
+          <div class="graddetails1 text-center te text-warning pt-2 pb-2">
+            <H4> GRADUATION</h4>
             <div class="graddetails2 text-light">
             BACHELOR'S OF COMPUTER <br>APPLICATIONS.<br> (2006 - 2010)
         </div>
@@ -518,8 +571,8 @@ background-size: cover;
       <hr class="horizontalline w-25 bg-light mx-auto">
     
          <div class="postgraduation ">
-          <div class="pgdetails1 text-center text-warning pt-3 pb-3 ">
-           <H4>Post-Grad</h4>
+          <div class="pgdetails1 text-center text-warning pt-2 pb-2 ">
+           <H4>POST<BR>GRADUATION</h4>
            <div class="pgdetail2 text-light">
             MASTER'S OF COMPUTER <br>APPLICATIONS.<br>(2006 - 2010)
         </div>
@@ -529,155 +582,108 @@ background-size: cover;
     <!--END EDUCATION PAGE-->
 
     <!--START PROJECTS PAGE--->
-    <div id="slide4">
+    <div class="slide4 bg-warning w-100 vh-100">
     </div>
         
         <div id="slide5">
-            <div class="progresspage bg-dark w-100 h-100">
-       <div class="skillbox w-50  pl-5 pr-3 pt-5 pb-5  mx-auto text-light">
-        <i class="fa fa-html5 pb-3 text-warning text-left" aria-hidden="true"></i> HTML
-       <div class="progress bg-dark mb-4">
-  <div class="progress-bar bg-warning "
-   role="progressbar" style="width: 90%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90%</div>
-</div>
-<i class="fa fa-css3 pb-3 pt-3 text-warning" aria-hidden="true"></i> CSS/SCSS
-<div class="progress bg-dark mb-4">
-  <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
-</div>
-<i class="fa fa-jsfiddle text-warning pb-3 pt-3" aria-hidden="true"></i> JAVASCRIPT/JQUERY
-<div class="progress bg-dark mb-4">
-  <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">65%</div>
-</div>
-<i class="fa fa-laptop text-warning pb-3 pt-3" aria-hidden="true"></i> BOOTSTRAP 
-<div class="progress bg-dark mb-4">
-  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-</div>
-<i class="fa fa-laptop text-warning pb-3 pt-3" aria-hidden="true"></i>ILLUSTRATOR/PHOTOSHOP
-<div class="progress bg-dark mb-4">
-  <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">75%</div>
-
-
-</div>
- <i class="fa fa-html5 pb-3 text-warning text-left" aria-hidden="true"></i> HTML
-<div class="progress bg-dark mb-4">
-  <div class="progress-bar bg-warning "
-   role="progressbar" style="width: 90%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">90%</div>
-</div>
-       </div>
+            
+        <div class="progressBar bg-dark w-100 vh-auto">
           
-</div</div></div>
+          <div class="slide5 w-100">
+  <div class="heading text-dark bg-light font-weight-bold "> 
+        <div class="headingabout animated fadeInDown slow text-center pb-3 pt-0  ">MY <span class= "metext w-25 h-50 pl-2 pr-2 text-center mx-auto bg-warning">SKILLS </div>
+        </div></div>
+       <div class="meter w-50 pt-3 pb-2 mx-auto font-weight-bold text-light">
+       
+        <i class="fa fa-html5 pb-4 pt-5" aria-hidden="true"></i> HTML
+  <span class="progress-bar bg-warning mb-3" role="progressbar" style="width: 90%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></span>   
+
+<i class="fa fa-css3 pb-4" aria-hidden="true"></i> CSS/SCSS
+  <span class="progress-bar bg-warning mb-3" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</span>
+  <i class="fa fa-laptop pb-4" aria-hidden="true"></i> BOOTSTRAP 
+
+  <span class="progress-bar bg-warning mb-5" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</span>
+<i class="fa fa-jsfiddle pb-4 pt-5" aria-hidden="true"></i> JAVASCRIPT/JQUERY
+  <span class="progress-bar bg-warning mb-3" role="progressbar" style="width: 65%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">65%</span>
+
+ILLUSTRATOR
+<i class="fa fa-html5 pb-4" aria-hidden="true"></i> 
+  <span class="progress-bar bg-warning mb-3 " role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">75%</span>
+  <i class="fa fa-laptop pb-4" aria-hidden="true"></i> PHOTOSHOP
+
+  <span class="progress-bar bg-warning mb-3" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</span>
+ILLUSTRATOR/PHOTOSHOP
+<i class="fa fa-html5 pb-4" aria-hidden="true"></i> 
+  <span class="progress-bar bg-warning mb-5 " role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">75%</span>
+  <div class="languages pt-5">
+  ENGLISH
+    <span class="progress-bar bg-warning mt-3 mb-3 " role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></span></span>
+  HINDI
+
+  <span class="progress-bar bg-warning mt-3 mb-3" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</span>
+
+PUNJABI
+  <span class="progress-bar bg-warning mt-3 mb-5 " role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">75%</span>
+</div>
+    </div>      
+</div></div></div>
   <!--END SKILLS PAGE-->
 
   <!--START CONTACT PAGE-->
 
-<div id="slide6">
-  <div class="section w-50 text-center mx-auto text-dark border border-2 border-top-0 border-warning">
-   <div class="top-border left bg-warning "></div>
-   <div class="top-border right bg-warning"></div>
-   <h1>GET IN TOUCH</h1>
-   <div class="contactdetails">
+<div class="slide6 bg-dark w-75 mx-auto vh-100">
+   <div class="slide6 w-100">
+  <div class="heading text-dark bg-light font-weight-bold "> 
+        <div class="headingabout animated fadeInDown slow text-center pb-3 pt-0  ">CONTACT <span class= "metext w-25 h-50 pl-2 pr-2 text-center mx-auto bg-warning">ME </div></span></div>
+  <div class="section w-50 h-50 mt-5  text-center bg-light text-light border border-dark mx-auto border-2">
+   
+    <div class="contactdetails">
      <i class="fa fa-envelope fa-2x text-dark pt-3 pb-2" ></i><div class="contactmail h5 text-dark">manu@sujjon.in</div>
      <i class="fa fa-phone-square fa-3x  pt-3 text-dark"></i>
      <div class="contactphone h5 text-dark">+61 - 490460620 &nbsp;&nbsp;</div>
-     <div class="button mt-5 text-center">
-         <a href="Resume.pdf">DOWNLOAD CV</button></a>
-      </div>
-</div></section></div>
+     <div class="cvbutton mt-4 mb-4 text-center">
+      <a class="buttoncv bg-dark" href="Resume"><button type="button" class="btn text-light">Download CV</button></a>
+     </div>
+   </div>
+ </div>
+</div></section>
+ <div class="slide3 bg-light w-100 h-25">    
+     <div class="heading mt-5 pt-4 h6"> 
+      <div class="headingedu text-center h6 text-dark pt-5"> 2020. All Rights Reserved.</div></div></div</div>
  
  <!--END CONTACT PAGE--->      
 
-<script>
-        function Circlle(el){
-  $(el).circleProgress({})
-    .on('circle-animation-progress', function(event, progress, stepValue){
-    $(this).find('strong').text(String(stepValue.toFixed(2)).substr(2)+'%');
-    });  
-};
-Circlle('.round');</script>
-
 <script type="text/javascript">
-  var $alert = $('.alert');
-var $circleprogressBar = $('.circleprogressBar');
-
-var circleprogress = 0;      // initial value of your progress bar
-var timeout = 10;      // number of milliseconds between each frame
-var increment = .5;    // increment for each frame
-var maxprogress = 70; // when to leave stop running the animation
-
-function animate() {
-    setTimeout(function () {
-        circleprogress += increment;
-        if(circleprogress < maxprogress) {
-            $cirlceprogressBar.attr('value', circleprogress);
-            animate();
-        } else {
-            $circleprogressBar.css('display', 'none');
-            $alert.css('display', 'block');
-        }
-    }, timeout);
-};
-animate();
+ 
 </script>
 <script>
-  $(".heading1").delay(1100);
-$(".heading1").typeText({
-  typeSpeed: 80,
-  delay:1000,
-  lineWait: 100,
-});
+ $(document).ready(function () {
+  var trigger = $('.hamburger'),
+      overlay = $('.overlay'),
+     isClosed = false;
 
-</script>
-<script>
-  var btn = $('#button');
+    trigger.click(function () {
+      hamburger_cross();      
+    });
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
+    function hamburger_cross() {
+
+      if (isClosed == true) {          
+        overlay.hide();
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        overlay.show();
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
   }
-});
-
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
-});
-
-
-</script>
-<script>
-  $(document).ready(function() {
-
- // Get current page URL
- var url = window.location.href;
-
- // remove # from URL
- url = url.substring(0, (url.indexOf("#") == -1) ? url.length : url.indexOf("#"));
-
- // remove parameters from URL
- url = url.substring(0, (url.indexOf("?") == -1) ? url.length : url.indexOf("?"));
-
- // select file name
- url = url.substr(url.lastIndexOf("/") + 1);
- 
- // If file name not avilable
- if(url == ''){
- url = 'index.html';
- }
- 
- // Loop all menu items
- $('.nav-link li').each(function(){
-
-  // select href
-  var href = $(this).find('a').attr('href');
- 
-  // Check filename
-  if(url == href){
-
-   // Add active class
-   $(this).addClass('active');
-  }
- });
+  
+  $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+  });  
 });
 </script>
     </body>
